@@ -1,0 +1,270 @@
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    
+  <div class="app-header">
+    <div class="header-left">
+      <p v-if="user.userId">您好，{{ user.departName }}</p>
+      <p @click="goLoginPage" v-else style="color: #1890ff; cursor: pointer">
+        您好，请登录
+      </p>
+    </div>
+    <div class="header-right">
+      <p
+        @click="goHomePage"
+        style="display: flex; align-items: center"
+        @mouseenter="iconEnter"
+        @mouseleave="iconLeave"
+      >
+        <rt-portal-icon
+          style="margin-right: 5px"
+          :color="iconColor"
+          name="rt-portal-HOMEPAGE"
+          size="14"
+        ></rt-portal-icon
+        >首页
+      </p>
+
+      <div
+        @click="goShopCartPage"
+        class="cart"
+        style="display: flex; align-items: center"
+        @mouseenter="iconCartEnter"
+        @mouseleave="iconCartLeave"
+      >
+        <div class="badge" v-if="cartCount > 0">{{ cartCount }}</div>
+
+        <rt-portal-icon
+          style="margin-right: 5px"
+          :color="iconCartColor"
+          name="rt-portal-rt_menu_shopping"
+          size="14"
+        ></rt-portal-icon
+        >购物车
+      </div>
+    </div>
+    <change-password-dialog ref="dlgPassword"></change-password-dialog>
+    <change-avatar-dialog ref="dlgAvatar"></change-avatar-dialog>
+  </div>
+
+<script>
+import Message from "@/assets/imgs/message.png";
+import defaultAvatar from "@/assets/imgs/default_avatar.png";
+import ChangePasswordDialog from "../../ChangePasswordDialog";
+import ChangeAvatarDialog from "../../ChangeAvatarDialog";
+import { mapGetters } from "vuex";
+export default {
+  data() {
+    return {
+      messageImg: Message,
+      defaultAvatar: defaultAvatar,
+      passwordDialogVisible: false,
+      avatarDialogVisible: false,
+      messageList: [],
+      serviceList: [],
+      orderList: [],
+      messageLength: 0,
+      serviceLength: 0,
+      orderLength: 0,
+      iconColor: "rgba(0, 0, 0, 0.20)",
+      iconCartColor: "rgba(0, 0, 0, 0.20)",
+    };
+  },
+  components: {
+    "change-avatar-dialog": ChangeAvatarDialog,
+    "change-password-dialog": ChangePasswordDialog,
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+    avatarUrl() {
+      var avatarUrl = this.user.avatarUrl;
+      if (rt.isNullOrWhiteSpace(avatarUrl)) {
+        return null;
+      }
+
+      return rt.getBaseUrl() + avatarUrl;
+    },
+    isCollapse() {
+      return this.$store.state.navCollapsed;
+    },
+
+    ...mapGetters(["cartCount"]),
+  },
+  mounted() {
+    if (this.user.userId) {
+      this.loadMessageList();
+    }
+    this.$bus.$on("message-updated", this.onMessageUpdated);
+    this.loadCartCount();
+  },
+  destroyed() {
+    this.$bus.$off("message-updated", this.onMessageUpdated);
+  },
+  methods: {
+    loadCartCount() {
+      let url = "api/ShoppingCart/GetShoppingCartCount";
+      rt.get(url)
+        .then((resp) => {
+          this.loadCartCount = resp;
+        })
+        .catch((error) => {
+          rt.showErrorToast(error);
+        });
+    },
+    iconEnter() {
+      this.iconColor = "#1890FF";
+    },
+    iconLeave() {
+      this.iconColor = "rgba(0, 0, 0, 0.20)";
+    },
+    iconCartEnter() {
+      this.iconCartColor = "#1890FF";
+    },
+    iconCartLeave() {
+      this.iconCartColor = "rgba(0, 0, 0, 0.20)";
+    },
+    onMessageUpdated() {
+      this.loadMessageList();
+    },
+    loadMessageList() {
+      let url = "api/DMSMessage/GetMessageList";
+      let params = {
+        filterValue: "new_readstatus=1",
+        pageIndex: 1,
+        pageSize: 5,
+      };
+      rt.get(url, params)
+        .then((resp) => {
+          this.messageLength = 0;
+          this.messageList = [];
+          this.messageList = JSON.parse(resp).MessageList;
+          this.messageLength = JSON.parse(resp).TotalRecordCount;
+          if (this.messageLength > 0) {
+            this.messageList.push({
+              new_link: "more-list",
+              new_content: "查看更多",
+            });
+          }
+        })
+        .catch((error) => {
+          // 报错
+          // rt.showErrorToast(error);
+        });
+    },
+    foldMenu() {
+      this.$store.commit("UPDATE_NAV_COLLAPSE", !this.isCollapse);
+    },
+    //语言选择
+    setLanguage(locale) {
+      //   this.$i18n.locale = locale;
+      localStorage.i18nLocale = locale;
+
+      location.reload();
+    },
+    handleCommand(command) {
+      if (command == "change_pwd") {
+        this.showPasswordDialog();
+      } else if (command == "change_avatar") {
+        this.showAvatarDialog();
+      } else if (command == "logout") {
+        this.logout();
+        localStorage.setItem("breadListState", "");
+      }
+    },
+    goLoginPage() {
+      this.$router.push({
+        name: "login",
+      });
+    },
+    goHomePage() {
+      this.$router.push({
+        name: "home",
+      });
+    },
+    goShopCartPage() {
+      this.$router.push({
+        name: "ShoppingCartList",
+      });
+    },
+    goRelatedPage(url) {
+      if (this.user.userId) {
+        let routeData = this.$router.resolve({
+          name: url,
+        });
+        window.open(routeData.href, "_blank");
+      } else {
+        this.$confirm("请先登录", {
+          confirmButtonText: "确认",
+          cancelButtonText: "取消",
+          type: "warning",
+        }).then(() => {
+          this.$router.push({
+            name: "login",
+          });
+        });
+      }
+    },
+    messageCommand(command) {
+      let arr;
+      if (command.new_link === "more-list") {
+        this.$router.push({
+          name: "message",
+        });
+      } else {
+        if (command.new_link) {
+          arr = command.new_link.split("/");
+          command.new_link = arr[1] + "-" + arr[2];
+        }
+        if (arr[4]) {
+          this.$router.push({
+            name: command.new_link,
+            params: {
+              id: arr[3],
+              type: parseInt(arr[4]),
+            },
+          });
+        } else {
+          this.$router.push({
+            name: command.new_link,
+            params: {
+              id: arr[3],
+            },
+          });
+        }
+        this.readMessage(command.new_notificationid);
+      }
+    },
+    serviceCommand(command) {},
+    orderCommand(command) {},
+    readMessage(id) {
+      let url = "api/DMSMessage/ReadMessage";
+      let params = {
+        id: id,
+      };
+      rt.get(url, params)
+        .then((resp) => {
+          this.loadMessageList();
+          this.$bus.$emit("message-updated");
+        })
+        .catch((error) => {
+          rt.showErrorToast(error);
+        });
+    },
+    logout() {
+      this.$auth.logout();
+    },
+    showAvatarDialog() {
+      this.$refs.dlgAvatar.show();
+    },
+    showPasswordDialog() {
+      this.$refs.dlgPassword.show();
+    },
+  },
+};
+</script>
+
+<style lang="less" scoped>
+@import "../../../assets/less/home.less";
+</style>

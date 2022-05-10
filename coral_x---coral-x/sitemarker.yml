@@ -1,0 +1,24 @@
+- adx_name: Access Denied
+  adx_pageid: 80a54059-0daf-ec11-983f-00224818de88
+  adx_sitemarkerid: a9fef953-0daf-ec11-983f-00224818d026
+- adx_name: Event Feedback
+  adx_sitemarkerid: aafef953-0daf-ec11-983f-00224818d026
+- adx_name: Profile
+  adx_pageid: 86a54059-0daf-ec11-983f-00224818de88
+  adx_sitemarkerid: affef953-0daf-ec11-983f-00224818d026
+- adx_name: Knowledge Base
+  adx_sitemarkerid: b0fef953-0daf-ec11-983f-00224818d026
+- adx_name: Search
+  adx_pageid: 82a54059-0daf-ec11-983f-00224818de88
+  adx_sitemarkerid: b2fef953-0daf-ec11-983f-00224818d026
+- adx_name: Knowledge Base Search Results
+  adx_sitemarkerid: b3fef953-0daf-ec11-983f-00224818d026
+- adx_name: Page Not Found
+  adx_pageid: 81a54059-0daf-ec11-983f-00224818de88
+  adx_sitemarkerid: b4fef953-0daf-ec11-983f-00224818d026
+- adx_name: Home
+  adx_pageid: fc43f259-0daf-ec11-983f-00224818d026
+  adx_sitemarkerid: b5fef953-0daf-ec11-983f-00224818d026
+- adx_name: Default Offline Page
+  adx_pageid: aa60c59e-72b5-ec11-983f-000d3a85f383
+  adx_sitemarkerid: c060c59e-72b5-ec11-983f-000d3a85f383

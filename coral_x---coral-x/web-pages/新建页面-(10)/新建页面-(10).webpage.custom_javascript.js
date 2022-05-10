@@ -1,0 +1,1 @@
+$("i[class='el-submenu__icon-arrow el-icon-arrow-down']").css("display","none");

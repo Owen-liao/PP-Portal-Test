@@ -1,0 +1,14 @@
+adx_append: false
+adx_appendto: false
+adx_create: true
+adx_delete: false
+adx_entitylogicalname: feedback
+adx_entityname: 反馈
+adx_entitypermission_webrole:
+- 1344f259-0daf-ec11-983f-00224818d026
+- 1744f259-0daf-ec11-983f-00224818d026
+- 1844f259-0daf-ec11-983f-00224818d026
+adx_entitypermissionid: 4efef953-0daf-ec11-983f-00224818d026
+adx_read: false
+adx_scope: 756150000
+adx_write: false

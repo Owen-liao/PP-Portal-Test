@@ -1,0 +1,202 @@
+- adx_name: HTTP/X-Frame-Options
+  adx_sitesettingid: 035f4853-0daf-ec11-983f-00224818de88
+  adx_value: SAMEORIGIN
+- adx_description: 'IP 地址必须等待 Authentication/LoginThrottling/IpAddressTimeoutTimeSpan 之前，Authentication/LoginThrottling/MaxInvaildAttemptsFromIPAddress 应该经历的时间长度。默认值: 00:03:00 (3 分钟)'
+  adx_name: Authentication/LoginThrottling/MaxAttemptsTimeLimitTimeSpan
+  adx_sitesettingid: 045f4853-0daf-ec11-983f-00224818de88
+  adx_value: 00:03:00
+- adx_description: 在此处输入的前缀将用于筛选注释文本，使您可以控制在门户上公开的注释，例如 *WEB*
+  adx_name: KnowledgeManagement/NotesFilter
+  adx_sitesettingid: 055f4853-0daf-ec11-983f-00224818de88
+  adx_value: '*WEB*'
+- adx_name: Authentication/Registration/Enabled
+  adx_sitesettingid: 065f4853-0daf-ec11-983f-00224818de88
+  adx_value: true
+  importsequencenumber: 5
+- adx_name: Authentication/Registration/EmailConfirmationEnabled
+  adx_sitesettingid: 075f4853-0daf-ec11-983f-00224818de88
+  adx_value: true
+  importsequencenumber: 3
+- adx_description: 启用此设置将在门户日程表上显示所有客户活动。
+  adx_name: CustomerSupport/DisplayAllUserActivitiesOnTimeline
+  adx_sitesettingid: 085f4853-0daf-ec11-983f-00224818de88
+  adx_value: false
+- adx_name: Authentication/OpenAuth/Twitter/ConsumerSecret
+  adx_sitesettingid: 095f4853-0daf-ec11-983f-00224818de88
+  importsequencenumber: 5
+- adx_name: Search/IndexQueryName
+  adx_sitesettingid: 0a5f4853-0daf-ec11-983f-00224818de88
+  adx_value: Portal Search
+- adx_description: true 或 false 值。如果设置为 true，则门户用户的联系人上的“上次成功登录”字段将使用其成功登录时的日期和时间进行更新。
+  adx_name: Authentication/LoginTrackingEnabled
+  adx_sitesettingid: 0b5f4853-0daf-ec11-983f-00224818de88
+  adx_value: False
+- adx_description: 设置将控制是否在知识文章上显示附件
+  adx_name: KnowledgeManagement/DisplayNotes
+  adx_sitesettingid: 0c5f4853-0daf-ec11-983f-00224818de88
+  adx_value: false
+- adx_description: 拒绝未成年人在没有家长同意的情况下使用该门户。默认情况下，它设置为 false。
+  adx_name: Authentication/Registration/DenyMinorsWithoutParentalConsent
+  adx_sitesettingid: 0d5f4853-0daf-ec11-983f-00224818de88
+  adx_value: false
+- adx_name: search/filters
+  adx_sitesettingid: 2e548440-f1ba-ec11-983f-000d3a85ad6e
+  adx_value: Product_coral:vy_product_coral
+- adx_description: 开放产品所有字段搜索
+  adx_name: Webapi/vy_product_coral/fields
+  adx_sitesettingid: 306540db-6dc7-ec11-a7b5-000d3a85f2a1
+  adx_value: '*'
+- adx_name: Search/EnableAdditionalEntities
+  adx_sitesettingid: 3ceb95ca-f0ba-ec11-983f-000d3a85ad6e
+  adx_value: true
+- adx_description: 产品实体api开放
+  adx_name: Webapi/vy_product_coral/enabled
+  adx_sitesettingid: 65d7a0ae-6dc7-ec11-a7b5-000d3a85f2a1
+  adx_value: true
+- adx_name: Authentication/OpenAuth/Google/RegistrationEnabled
+  adx_sitesettingid: 9977b7ad-9dc3-ec11-a7b5-000d3a85f594
+  adx_value: true
+- adx_name: Authentication/OpenAuth/Google/AllowContactMappingWithEmail
+  adx_sitesettingid: 9a77b7ad-9dc3-ec11-a7b5-000d3a85f594
+  adx_value: true
+- adx_name: Authentication/OpenAuth/Google/ClientId
+  adx_sitesettingid: 9b77b7ad-9dc3-ec11-a7b5-000d3a85f594
+  adx_value: 272722431725-ptih7g8momf8r9ruln5g8mqkcnsgm97g.apps.googleusercontent.com
+- adx_name: Authentication/OpenAuth/Google/ClientSecret
+  adx_sitesettingid: 9c77b7ad-9dc3-ec11-a7b5-000d3a85f594
+  adx_value: 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
+- adx_description: true 或 false 值。如果设置为 true，本地帐户将被标记为已弃用。门户用户需要迁移到一个未弃用的帐户。
+  adx_name: Authentication/Registration/LocalLoginDeprecated
+  adx_sitesettingid: bafef953-0daf-ec11-983f-00224818d026
+  adx_value: False
+- adx_name: Authentication/OpenAuth/Facebook/AppId
+  adx_sitesettingid: bbfef953-0daf-ec11-983f-00224818d026
+  importsequencenumber: 5
+- adx_name: Search/Enabled
+  adx_sitesettingid: bcfef953-0daf-ec11-983f-00224818d026
+  adx_value: true
+- adx_name: OnlineDomains
+  adx_sitesettingid: c0fef953-0daf-ec11-983f-00224818d026
+  adx_value: sharepoint.com;microsoftonline.com
+- adx_description: '替代对站点搜索的查询，以便应用更多权重和筛选器。@Query 是用户输入的查询文本。Lucene 查询语法参考: http://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html'
+  adx_name: search/query
+  adx_sitesettingid: c1fef953-0daf-ec11-983f-00224818d026
+  adx_value: +(@Query) _title:(@Query) _logicalname:knowledgearticle~0.9^0.3 _logicalname:annotation~0.9^0.25 _logicalname:adx_webpage~0.9^0.2 -_logicalname:adx_webfile~0.9 adx_partialurl:(@Query) _logicalname:adx_blogpost~0.9^0.1 -_logicalname:adx_communityforumthread~0.9
+- adx_name: Profile/ForceSignUp
+  adx_sitesettingid: c2fef953-0daf-ec11-983f-00224818d026
+  adx_value: False
+- adx_name: Authentication/OpenAuth/Facebook/AppSecret
+  adx_sitesettingid: c3fef953-0daf-ec11-983f-00224818d026
+  importsequencenumber: 5
+- adx_description: '阻止 IP 地址执行 Authentication/LoginThrottling/IpAddressTimeoutTimeSpan 之前，从该 IP 地址执行未通过身份验证的登录尝试的默认次数(前提是这些尝试在 Authentication/LoginThrottling/MaxAttemptsTimeLimitTimeSpan 时间长度内执行)。默认值: 1000'
+  adx_name: Authentication/LoginThrottling/MaxInvaildAttemptsFromIPAddress
+  adx_sitesettingid: c4fef953-0daf-ec11-983f-00224818d026
+  adx_value: 1000
+- adx_name: Authentication/OpenAuth/LinkedIn/ConsumerKey
+  adx_sitesettingid: c6fef953-0daf-ec11-983f-00224818d026
+- adx_description: GMT 格式的日期/时间值，用于表示当前发布的条款和条件的生效日期。如果启用条款协议，则会要求在此日期之后尚未接受条款的门户用户在下次登录时接受这些条款。如果未提供该日期，而条款协议已启用，则将在门户用户每次登录时都会显示这些条款。
+  adx_name: Authentication/Registration/TermsPublicationDate
+  adx_sitesettingid: c7fef953-0daf-ec11-983f-00224818d026
+- adx_name: Authentication/Registration/LoginButtonAuthenticationType
+  adx_sitesettingid: c8fef953-0daf-ec11-983f-00224818d026
+  importsequencenumber: 3
+- adx_name: Authentication/Registration/LocalLoginEnabled
+  adx_sitesettingid: c9fef953-0daf-ec11-983f-00224818d026
+  adx_value: true
+- adx_description: 设置是否对标头 Web 模板进行输出缓存。
+  adx_name: Header/OutputCache/Enabled
+  adx_sitesettingid: cafef953-0daf-ec11-983f-00224818d026
+  adx_value: True
+- adx_description: 确定分面搜索是否适用于此门户。
+  adx_name: Search/FacetedView
+  adx_sitesettingid: cbfef953-0daf-ec11-983f-00224818d026
+  adx_value: True
+- adx_name: Authentication/OpenAuth/Microsoft/ClientId
+  adx_sitesettingid: ccfef953-0daf-ec11-983f-00224818d026
+  importsequencenumber: 5
+- adx_description: 用于确定语言代码是否包含在门户 URL 中的站点设置。
+  adx_name: MultiLanguage/DisplayLanguageCodeInURL
+  adx_sitesettingid: cefef953-0daf-ec11-983f-00224818d026
+  adx_value: False
+- adx_description: 设置是否对页脚 Web 模板进行输出缓存。
+  adx_name: Footer/OutputCache/Enabled
+  adx_sitesettingid: cffef953-0daf-ec11-983f-00224818d026
+  adx_value: True
+- adx_name: Authentication/UserManager/UserValidator/RequireUniqueEmail
+  adx_sitesettingid: d09caee5-b0c2-ec11-983e-000d3a85f7d6
+  adx_value: true
+- adx_description: 启用或禁用将 Azure AD 作为外部标识提供者。默认情况下，它设置为 true。
+  adx_name: Authentication/Registration/AzureADLoginEnabled
+  adx_sitesettingid: d0fef953-0daf-ec11-983f-00224818d026
+  adx_value: true
+  importsequencenumber: 3
+- adx_description: true 或 false 值。如果设置为 true，该门户将显示站点的条款和条件。用户必须先同意此条款和条件才会被视为已通过身份验证，并可使用该站点。
+  adx_name: Authentication/Registration/TermsAgreementEnabled
+  adx_sitesettingid: d2fef953-0daf-ec11-983f-00224818d026
+  adx_value: false
+- adx_name: Authentication/Registration/OpenRegistrationEnabled
+  adx_sitesettingid: d3fef953-0daf-ec11-983f-00224818d026
+  adx_value: true
+  importsequencenumber: 3
+- adx_name: PWAFeature
+  adx_sitesettingid: d460c59e-72b5-ec11-983f-000d3a85f383
+  adx_value: '{"status":"enable"}'
+- adx_description: 用于控制网页层次结构(以新添加的支持语言进行克隆)的深度的站点设置。在克隆网页时，将以新添加的语言克隆 Web 链接集和内容代码段。
+  adx_name: MultiLanguage/MaximumDepthToClone
+  adx_sitesettingid: d5fef953-0daf-ec11-983f-00224818d026
+  adx_value: 3
+- adx_description: >-
+    一组搜索逻辑名称筛选器选项。如果在此处定义值，将向站点范围搜索添加下拉筛选器选项。
+
+
+    此值应采用名称/值对格式，并且名称与值之间使用冒号分隔，而各对值之间使用分号分隔。例如: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment"。
+  adx_name: search/filters
+  adx_sitesettingid: d6fef953-0daf-ec11-983f-00224818d026
+- adx_name: Authentication/OpenAuth/Twitter/ConsumerKey
+  adx_sitesettingid: d7fef953-0daf-ec11-983f-00224818d026
+  importsequencenumber: 5
+- adx_name: Authentication/OpenAuth/LinkedIn/ConsumerSecret
+  adx_sitesettingid: d9fef953-0daf-ec11-983f-00224818d026
+- adx_name: Authentication/OpenAuth/Microsoft/ClientSecret
+  adx_sitesettingid: dafef953-0daf-ec11-983f-00224818d026
+  importsequencenumber: 5
+- adx_name: Search/IndexNotesAttachments
+  adx_sitesettingid: ddfef953-0daf-ec11-983f-00224818d026
+  adx_value: false
+- adx_name: Site/EnableCustomPluginError
+  adx_sitesettingid: de810b3d-7ac3-ec11-a7b5-000d3a85f594
+  adx_value: True
+- adx_description: 设置门户是否可以在用户成功登录后将其重定向至配置文件页面。默认情况下，它设置为 true。
+  adx_name: Authentication/Registration/ProfileRedirectEnabled
+  adx_sitesettingid: defef953-0daf-ec11-983f-00224818d026
+  adx_value: true
+  importsequencenumber: 3
+- adx_name: Profile/ShowMarketingOptionsPanel
+  adx_sitesettingid: dffef953-0daf-ec11-983f-00224818d026
+  adx_value: True
+- adx_name: Authentication/Registration/ExternalLoginEnabled
+  adx_sitesettingid: e0fef953-0daf-ec11-983f-00224818d026
+  adx_value: true
+  importsequencenumber: 3
+- adx_description: '如果 Authentication/LoginThrottling/MaxInvaildAttemptsFromIPAddress 在 Authentication/LoginThrottling/MaxAttemptsTimeLimitTimeSpan 时间长度内，IP 地址必须等待的时间长度。默认值: 00:10:00 (10 分钟)'
+  adx_name: Authentication/LoginThrottling/IpAddressTimeoutTimeSpan
+  adx_sitesettingid: e1fef953-0daf-ec11-983f-00224818d026
+  adx_value: 00:10:00
+- adx_description: 用于将一组实体分组到记录类型分面视图中的一个条目下。
+  adx_name: Search/RecordTypeFacetsEntities
+  adx_sitesettingid: e2fef953-0daf-ec11-983f-00224818d026
+  adx_value: Downloads:annotation,adx_webfile
+- adx_name: Authentication/Registration/InvitationEnabled
+  adx_sitesettingid: e3fef953-0daf-ec11-983f-00224818d026
+  adx_value: true
+  importsequencenumber: 3
+- adx_description: 拒绝未成年人使用该门户。默认情况下，它设置为 false。
+  adx_name: Authentication/Registration/DenyMinors
+  adx_sitesettingid: e4fef953-0daf-ec11-983f-00224818d026
+  adx_value: false
+- adx_name: ThemeFeature
+  adx_sitesettingid: f33c7bf0-40af-ec11-983f-00224818de88
+  adx_value: '{"status":"enable","selectedThemeId":"0e87b0cb-83a0-4d04-8843-aa97796c4d87","siteSettingId":"f33c7bf0-40af-ec11-983f-00224818de88","version":"V1"}'
+- adx_name: Authentication/OpenAuth/Google/Caption
+  adx_sitesettingid: fc1ad1b3-9dc3-ec11-a7b5-000d3a85f594
+  adx_value: Google

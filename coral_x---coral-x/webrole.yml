@@ -1,0 +1,16 @@
+- adx_anonymoususersrole: true
+  adx_authenticatedusersrole: false
+  adx_name: 匿名用户
+  adx_webroleid: 1344f259-0daf-ec11-983f-00224818d026
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: true
+  adx_name: 已通过身份验证的用户
+  adx_webroleid: 1744f259-0daf-ec11-983f-00224818d026
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_name: 管理员
+  adx_webroleid: 1844f259-0daf-ec11-983f-00224818d026
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_name: 订单管理
+  adx_webroleid: 4b24e501-7ec3-ec11-a7b5-000d3a85f2a1

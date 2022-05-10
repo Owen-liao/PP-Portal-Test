@@ -1,0 +1,10 @@
+- adx_displayorder: 1
+  adx_isdefault: false
+  adx_isvisible: false
+  adx_name: 草稿
+  adx_publishingstateid: 025f4853-0daf-ec11-983f-00224818de88
+- adx_displayorder: 2
+  adx_isdefault: true
+  adx_isvisible: true
+  adx_name: 已发布
+  adx_publishingstateid: a1fef953-0daf-ec11-983f-00224818d026

@@ -1,0 +1,45 @@
+{% extends 'Two Column Layout' %}
+
+{% block sidebar %}
+  {% assign weblinkset_id = '353b8502-ecba-ec11-983f-000d3a85ad6e' %}
+  {% if weblinkset_id %}
+    {% assign nav = weblinks['353b8502-ecba-ec11-983f-000d3a85ad6e'] %}
+    {% if nav %}
+      <ul class=nav navbar-nav weblinks>
+        {% for link in nav.weblinks %}
+          <li class ="weblink dropdown">
+              {%- if link.weblinks.size > 0 -%}
+                <a class="dropdown-toggle" data-toggle="dropdown" title={{ link.name }} 
+                aria-haspopup="true" href={{ link.url }} aria-expanded="false">
+              {%- endif -%}
+              {%- if link.weblinks.size == 0 -%}
+               <a class="dropdown-toggle" href={{ link.url }} >
+              {%- endif -%}
+              {{ link.name }}  
+              {%- if link.weblinks.size > 0 -%}
+                <span class="caret"></span>
+              {%- endif -%}
+            </a>
+            <ul class="dropdown-menu">
+              <li class="weblink dropdown" >
+                {% for link in link.weblinks %}
+                  <a class="list-group-item" href={{ link.url }}>
+                    {{ link.name }}
+                  </a>
+                {% endfor %} 
+              </li>
+            </ul>
+          </li>         
+        {% endfor %}
+        
+      </ul>
+        
+    {% endif %}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class=page-copy>
+     {% include 'Page Copy' %}
+  </div>
+{% endblock %}

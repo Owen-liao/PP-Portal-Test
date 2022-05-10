@@ -1,0 +1,47 @@
+- adx_name: 授予对管理员的更改权限
+  adx_right: 1
+  adx_webpageaccesscontrolrule_webrole: []
+  adx_webpageaccesscontrolruleid: 0a44f259-0daf-ec11-983f-00224818d026
+  adx_webpageid: fc43f259-0daf-ec11-983f-00224818d026
+- adx_name: 授予对内容的更改权限
+  adx_right: 1
+  adx_webpageaccesscontrolrule_webrole: []
+  adx_webpageaccesscontrolruleid: 0d44f259-0daf-ec11-983f-00224818d026
+- adx_name: Restrict Read on 主页
+  adx_right: 2
+  adx_scope: 2
+  adx_webpageaccesscontrolrule_webrole:
+  - 1744f259-0daf-ec11-983f-00224818d026
+  adx_webpageaccesscontrolruleid: 1b962cc9-faaf-ec11-983f-00224818de88
+  adx_webpageid: fc43f259-0daf-ec11-983f-00224818d026
+  statecode: 1
+  statuscode: 2
+- adx_name: Restrict Read on 新建页面
+  adx_right: 2
+  adx_webpageaccesscontrolrule_webrole:
+  - 1744f259-0daf-ec11-983f-00224818d026
+  - 1844f259-0daf-ec11-983f-00224818d026
+  adx_webpageaccesscontrolruleid: 5212ae70-27af-ec11-983f-00224818de88
+  adx_webpageid: 50dff918-8bf0-4cfa-ba6f-d7ec29ca8c0d
+  statecode: 1
+  statuscode: 2
+- adx_name: Restrict Read on 订单
+  adx_right: 2
+  adx_webpageaccesscontrolrule_webrole: []
+  adx_webpageaccesscontrolruleid: 5fa8ed7c-7ec3-ec11-a7b5-000d3a85f594
+  adx_webpageid: cf4e99e5-d4fc-49b2-ac55-b36763d7d26b
+  statecode: 1
+  statuscode: 2
+- adx_name: Restrict Read on 客户珊瑚编辑
+  adx_right: 2
+  adx_webpageaccesscontrolrule_webrole: []
+  adx_webpageaccesscontrolruleid: 7fcc7236-65b2-ec11-983f-00224818de88
+  adx_webpageid: 390fefbb-5bf3-40e0-ba95-a5e58955978f
+  statecode: 1
+  statuscode: 2
+- adx_name: Restrict Read on 编辑
+  adx_right: 2
+  adx_webpageaccesscontrolrule_webrole:
+  - 1844f259-0daf-ec11-983f-00224818d026
+  adx_webpageaccesscontrolruleid: c40d55b2-4fb5-ec11-983f-000d3a85f383
+  adx_webpageid: ef93cb67-d6ef-4e4b-b6a0-2384ecd68897

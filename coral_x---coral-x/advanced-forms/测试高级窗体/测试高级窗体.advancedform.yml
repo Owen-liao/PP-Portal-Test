@@ -1,0 +1,10 @@
+adx_authenticationrequired: false
+adx_editexistingrecordpermitted: true
+adx_multiplerecordsperuserpermitted: true
+adx_name: 测试高级窗体
+adx_progressindicatorenabled: true
+adx_progressindicatorignorelaststep: false
+adx_progressindicatorprependstepnum: false
+adx_savechangeswarningonclose: false
+adx_startnewsessiononload: false
+adx_webformid: 1bd1f496-6ac4-ec11-a7b5-000d3a85f594

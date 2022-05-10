@@ -1,0 +1,39 @@
+
+{% fetchxml orderdata %}
+    <fetch distinct="false" mapping="logical" output-format="xml-platform" version="1.0">
+        <entity name="vy_order_coral">
+            <attribute name="vy_order_coralid"></attribute>
+            <attribute name="vy_orderno"></attribute>
+            <attribute name="createdon"></attribute>
+            <attribute name="vy_reproduct"></attribute>
+            <attribute name="vy_customer"></attribute>
+            <attribute name="vy_realpay"></attribute>
+            <attribute name="vy_amount"></attribute>
+            <attribute name="vy_orderstatus"></attribute>
+            <order descending="false" attribute="vy_orderno"></order>
+        <filter type="and">
+            <condition attribute="statecode" value="0" operator="eq"></condition>
+        </filter>
+        </entity>
+    </fetch>
+{% endfetchxml %}
+
+<el-table
+    :data="tableData"
+    stripe
+    style="width: 100%">
+    <el-table-column
+      prop="vy_order_coralid"
+      label="订单ID"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="vy_orderno"
+      label="订单编号"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="createdon"
+      label="创建时间">
+    </el-table-column>
+  </el-table>

@@ -1,0 +1,14 @@
+adx_append: true
+adx_appendto: true
+adx_create: true
+adx_delete: true
+adx_entitylogicalname: vy_customer_coral
+adx_entityname: 客户珊瑚
+adx_entitypermission_webrole:
+- 1344f259-0daf-ec11-983f-00224818d026
+- 1744f259-0daf-ec11-983f-00224818d026
+- 1844f259-0daf-ec11-983f-00224818d026
+adx_entitypermissionid: 1102a3ec-27af-ec11-983f-00224818d026
+adx_read: true
+adx_scope: 756150000
+adx_write: true

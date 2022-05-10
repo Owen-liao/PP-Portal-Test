@@ -1,0 +1,12 @@
+- adx_answer: 是
+  adx_displayorder: 1
+  adx_name: Yes
+  adx_pollid: 66fef953-0daf-ec11-983f-00224818d026
+  adx_polloptionid: 72fef953-0daf-ec11-983f-00224818d026
+  adx_votes: 6
+- adx_answer: 否
+  adx_displayorder: 2
+  adx_name: No
+  adx_pollid: 66fef953-0daf-ec11-983f-00224818d026
+  adx_polloptionid: 73fef953-0daf-ec11-983f-00224818d026
+  adx_votes: 2

@@ -1,0 +1,12 @@
+- adx_answer: 正确
+  adx_displayorder: 1
+  adx_name: True
+  adx_pollid: f45e4853-0daf-ec11-983f-00224818de88
+  adx_polloptionid: 6bfef953-0daf-ec11-983f-00224818d026
+  adx_votes: 8
+- adx_answer: 错误
+  adx_displayorder: 2
+  adx_name: False
+  adx_pollid: f45e4853-0daf-ec11-983f-00224818de88
+  adx_polloptionid: f65e4853-0daf-ec11-983f-00224818de88
+  adx_votes: 3

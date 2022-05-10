@@ -1,0 +1,12 @@
+- adx_adddescription: false
+  adx_attributelogicalname: vy_cost
+  adx_controlstyle: 756150001
+  adx_entityform: 2de3eaca-35ba-ec11-983f-000d3a85ad6e
+  adx_entityformforcreate: 2de3eaca-35ba-ec11-983f-000d3a85ad6e
+  adx_entityformmetadataid: 006c31d7-35ba-ec11-983f-000d3a85ad6e
+  adx_fieldisrequired: false
+  adx_ignoredefaultvalue: false
+  adx_randomizeoptionsetvalues: false
+  adx_setvalueonsave: false
+  adx_type: 100000000
+  adx_useattributedescriptionproperty: true

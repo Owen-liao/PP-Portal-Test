@@ -1,0 +1,15 @@
+<fetch distinct="false" mapping="logical" output-format="xml-platform" version="1.0">
+<entity name="vy_order_coral">
+<attribute name="vy_order_coralid"/>
+<attribute name="vy_orderno"/>
+<attribute name="createdon"/>
+<attribute name="vy_reproduct"/>
+<attribute name="vy_customer"/>
+<attribute name="vy_realpay"/>
+<attribute name="vy_amount"/>
+<attribute name="vy_orderstatus"/>
+<order descending="false" attribute="vy_orderno"/>
+<filter type="and">
+<condition attribute="statecode" value="0" operator="eq"/>
+</filter>
+</entity
